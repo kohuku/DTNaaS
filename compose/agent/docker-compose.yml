@@ -6,6 +6,8 @@ services:
       context: ./
       dockerfile: Dockerfile
     container_name: agent
+    ports:
+      - "5000:5000"
     privileged: true
     volumes:
       - ./data:/data
