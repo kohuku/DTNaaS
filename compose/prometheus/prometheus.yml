@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'daas_agents'
+    static_configs:
+      - targets: ['agent_1:5000', 'agent_2:5000']

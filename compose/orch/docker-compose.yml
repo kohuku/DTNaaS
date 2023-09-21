@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  orchestrator:
+    build: 
+      context: ./orchestrator
+      dockerfile: Dockerfile
+    container_name: orchestrator
+    ports:
+      - "5002:5000"
+    logging:
+      options:
+        max-size: "50m"
+    restart: always

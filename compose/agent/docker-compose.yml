@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  agent:
+    build: 
+      context: ./agent
+      dockerfile: Dockerfile
+    container_name: agent
+    privileged: true
+    volumes:
+      - ./data:/data
+    logging:
+      options:
+        max-size: "50m"
+    restart: always
