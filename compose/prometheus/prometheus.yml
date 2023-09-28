@@ -1,7 +1,10 @@
 global:
-  scrape_interval: 15s
+  scrape_interval: 5s
 
 scrape_configs:
-  - job_name: 'daas_agents'
+  - job_name: 'vm_test'
+    static_configs:
+      - targets: ['192.168.10.113:5000', '192.168.10.141:5000']
+  - job_name: 'containor_test'
     static_configs:
       - targets: ['agent_1:5000', 'agent_2:5000']

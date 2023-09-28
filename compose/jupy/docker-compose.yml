@@ -2,7 +2,9 @@ version: '3'
 
 services:
   jupyterlab:
-    image: jupyter/base-notebook
+    build: 
+      context: ./
+      dockerfile: Dockerfile
     container_name: jupyterlab
     ports:
       - "8888:8888"
